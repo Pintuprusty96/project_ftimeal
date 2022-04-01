@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN PAGE</title>
+  <style>
+  
+    
+  </style>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="account">
+        <h1 class="h1style">Log In</h1>
+       
+
+    </div>
+    <div class="log"> 
+        <h1 style="text-align: center;">Log In</h1>
+        <div class="box">
+            <form action="" id="myform">
+               
+                <p  class="quest" > Email Id</p>
+                <input type="email"  class="area" id="user">
+
+
+                <p  class="quest" > Password</p>
+                <input type="password" class="area" id="pass"> <br>
+
+            
+                <input type="submit" value="Log In" style="background-color: red; color: white; height: 40px; border-radius: 15px;margin-top: 20px; width: 180px;"> 
+            </form>
+        <a href="sign.html" style="text-decoration: none;color: red;text-align: center;"><h2>create an account ?</h2></a>
+        </div>
+
+    </div>
+</body>
+<script>
+    var regUser = JSON.parse(localStorage.getItem("logindata"));
+document.querySelector("#myform").addEventListener("submit", formSubmit);
+var form = document.querySelector("#myform");
+function formSubmit(event) {
+event.preventDefault();
+
+var userName = document.querySelector("#user").value;
+var passWord = document.querySelector("#pass").value;
+
+var flag =false;
+for (var i = 0; i < regUser.length; i++) {
+  if (regUser[i].email == userName && regUser[i].Password == passWord) {
+    flag=true;
+  }
+}
+if (flag ==true) {
+    
+    document.querySelector("input[type='submit']").addEventListener("click",function(){
+            window.location.href="index.html";
+            // alert("Login successful")
+    })
+}
+else {
+    alert("Wrong username or password")
+    // document.querySelector("#warning").innerText="Wrong username or password";      
+}
+
+}
+</script>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" >
+    <link rel="stylesheet" href="./CSS/cartPage.css" />
+    <script src="https://kit.fontawesome.com/6ee714d796.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/06d9f213d3.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <!-- Upper Navbar -->
+  <div id="uppernav">
+    <div id="leftnav">
+      <div>
+        <i id="icon" class="fa-solid fa-location-dot"></i> Food delivary Only in Hydrabad</div>
+      <div>
+        <i id="icon" class="fa-solid fa-phone-volume "></i> <b>9100347380</b></div>
+      <div>
+        <i id="icon"class="fa-solid fa-envelope"></i> fitmealsindia@gmail.com</div>
+    </div>
+    <div id="rightnav">
+      <div> <i id="icon" class="fa-solid fa-magnifying-glass"></i></div>
+      <a href="login.html"><div><i id="iconuper" class="fa-regular fa-user"></i></div></a>
+      <a href="cartPage.html"><div> <i id="iconuper" class="fa-solid fa-bag-shopping"></i></div></a>
+    </div>
+  </div>
+    
+<!-- Second Navbar -->
+  <div id="cont">
+    <div>
+      <img id="imglogo" src="https://www.fitmeals.co.in/wp-content/uploads/2019/06/logo-black.png" alt="">
+    </div>
+    <div id="link">
+      <h3 ><a href="index.html" id="healthcoching">Home</a></h3>
+      <div class="dropdown">
+        <h3 class="droph3">Meal Plans <i id="dispicon1" class="fa-solid fa-angle-right"></i></h3>
+        <div class="dropdown-content">
+        <a>Weight Loss Meal Plan</a>
+        <a>Maintenance Meal Plan</a>
+        <a>Athletic Meal Plan</a>
+        <a>keto Meal Plan</a>
+        <a>Transformation Challenges</a>
+        </div>
+      </div>
+      
+      <h3><a  id="healthcoching">Health Coaching</a></h3>
+      <div class="dropdown">
+        <h3 class="droph3">Product <i id="dispicon1" class="fa-solid fa-angle-right"></i></h3>
+        <div class="dropdown-content">
+        <a href="vegan.html">Vegan Sweets</a>
+        </div>
+      </div>
+      <h3><a  id="healthcoching">Blog</a></h3>
+      <div class="dropdown">
+        <h3 class="droph3">About Us <i id="dispicon1" class="fa-solid fa-angle-right"></i></h3>
+        <div class="dropdown-content">
+        <a>Our Story</a>
+        <a>FAQ</a>
+        <a>Testimonials</a>
+        </div>
+      </div>
+    </div>
+    <div>
+      <button id="callbtn">Call:9100347380</button>
+    </div>
+  </div>  
+  
+    <div id="container">
+        <h1 style="color:white;">CART</h1>
+      </div>
+      <!-- <div id="cart">
+        <div>
+          <img
+            id="cartImage"
+          />
+        </div> -->
+        <main>
+          <table>
+            <thead>
+              <tr>
+                <th class="product-remove">Clear</th>
+                <th class="product-thumbnail">S.No</th>
+                <th class="product-name">Product</th>
+                <th class="product-price">Price</th>
+                <th class="product-quantity">Quantity</th>
+                <th class="product-subtotal">Subtotal</th>
+              </tr>
+            </thead>
+            <tbody id="body">
+
+            </tbody>
+          </table>
+        </main>
+        <h6></h6>
+        <h1 style="text-align:center">Individual items</h1>
+        <div id ="showCart"></div>
+        <div id="promoUpdate">
+        <input type="text" id="promo" placeholder="Coupon Code" />
+        
+        <button onclick="promo()" class="promobtn" >Apply coupon</button>
+          
+        <a href="cartPage.html" id="UpdateCart">UPDATE CART</a>
+        </div>
+        <h1 id="showdiscount" style="margin-left:280px;"></h1>
+        <div id="totalorshipping">
+          <table id="cartTotalTable">
+            <tr>
+              <th class="shippingtable">subtotal</th>
+              <td id="tdata"><strong>₹0</strong></td>
+            </tr>
+            <tr>
+              <th class="shippingtable">Shipping</th>
+              <td id="tdata2"><label for="shipping_method_0_flat_rate1">Flat rate: <span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">₹</span>50.00</bdi></span></label><p class="woocommerce-shipping-destination">
+              Shipping to <strong>Telangana</strong>.</p>
+              <a href="" style="color:black;text-decoration-color: lightgray;">CHANGE ADDRESS <i class="fa fa-shopping-cart"></i></a>
+              </a>
+              </td>
+            </tr>
+            <tr>
+              <th class="shippingtable">Total</th>
+              <td id="tdata3"><Strong>₹0</Strong></td>
+            </tr>
+          </table>
+          <a href="checkout.html">​<button class="Chkbtn">Proceed to Checkout</button></a>
+        </div>
+        <div id="container1">
+          <div>
+              <div class="">	
+                <a class="logo" href="index.html">
+                  <img id="footlogo" src=https://www.fitmeals.co.in/wp-content/uploads/2019/06/logo-white.png alt="Fitmeals">
+                </a>
+              </div>
+                <div>
+                  <p id="text"> Fitmeals culinary team consists of very passionate and skilled chefs.Our team is well versed in nutrition and all our menus and plans are designed by qualified nutrition experts.</p>
+              </div>
+              <div id="imgtrio">
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-instagram"></i>
+              </div>
+          </div>
+          <div id="explore">
+              <h1 id="expl">Explore</h1>
+              <h4 id="desc"><i id="dispicon" class="fa-solid fa-angle-right"></i> Home</h4>
+              <h4 id="desc"><i id="dispicon" class="fa-solid fa-angle-right"></i> Meal Plan</h4>  
+          </div>
+          <div id="explore">
+            <h1 id="expl">Links</h1>
+            <h4 id="desc"><i id="dispicon" class="fa-solid fa-angle-right"></i> About Us</h4>
+            <h4 id="desc"><i id="dispicon" class="fa-solid fa-angle-right"></i> Blog</h4>
+            <h4 id="desc"><i id="dispicon" class="fa-solid fa-angle-right"></i> FAQ</h4>  
+            <h4 id="desc"><i id="dispicon" class="fa-solid fa-angle-right"></i> Testimonials</h4>  
+            </div>
+          <div id="contact">
+            <h1 id="expl">Contact</h1>
+                  <div id="foot">
+                      <i id="log" class="fa-solid fa-phone-volume "></i>
+                      <b class="green">Call Us :</b>
+                      <h5>9100347480</h5>
+                      <h5>9963697412</h5>
+                  </div>
+                  <div id="foot">
+                      <i id="log" class="fa-solid fa-envelope"></i>
+                      <b class="green">Email Us :</b>
+                      <h5>fitmealsindia@gmail.com</h5>
+                  </div>
+                  <div id="foot">
+                      <i id="log" class="fa-solid fa-location-dot"></i>
+                      <b class="green">Our Location</b>
+                      <h5>Banjara Hills, Road no.5, Hyderabad</h5>
+                  </div>
+            </div>
+        </div> 
+</body>
+</html>
+<script src="./script/cartPage.js"></script>

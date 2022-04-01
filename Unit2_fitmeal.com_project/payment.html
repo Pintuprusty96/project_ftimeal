@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="payment.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@100&family=Fira+Sans:wght@100;400&family=Open+Sans:wght@300&family=Sacramento&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="./Style/index.css"> -->
+    <script src="https://kit.fontawesome.com/6ee714d796.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/06d9f213d3.js" crossorigin="anonymous"></script>
+    <title>payment page</title>
+  </head>
+  <body>
+   <!-- Upper Navbar -->
+  <div id="uppernav">
+    <div id="leftnav">
+      <div>
+        <i id="icon" class="fa-solid fa-location-dot"></i> Food delivary Only in Hydrabad</div>
+      <div>
+        <i id="icon" class="fa-solid fa-phone-volume "></i> <b>9100347380</b></div>
+      <div>
+        <i id="icon"class="fa-solid fa-envelope"></i> fitmealsindia@gmail.com</div>
+    </div>
+    <div id="rightnav">
+      <div> <i id="icon" class="fa-solid fa-magnifying-glass"></i></div>
+        <a href="login.html"><div><i id="icon" class="fa-regular fa-user"></i></div></a>
+        <a href="cartPage.html"><div> <i id="icon" class="fa-solid fa-bag-shopping"></i></div></a>
+    </div>
+  </div>
+
+<!-- Second Navbar -->
+  <div id="container">
+    <div>
+      <img id="imglogo" src="https://www.fitmeals.co.in/wp-content/uploads/2019/06/logo-black.png" alt="">
+    </div>
+    <div id="link">
+      <h3 ><a href="index.html" id="healthcoching">Home</a></h3>
+      <div class="dropdown">
+        <h3 class="droph3">Meal Plans <i id="dispicon1" class="fa-solid fa-angle-right"></i></h3>
+        <div class="dropdown-content">
+        <a>Weight Loss Meal Plan</a>
+        <a>Maintenance Meal Plan</a>
+        <a>Athletic Meal Plan</a>
+        <a>keto Meal Plan</a>
+        <a>Transformation Challenges</a>
+        </div>
+      </div>
+      
+      <h3><a  id="healthcoching">Health Coaching</a></h3>
+      <div class="dropdown">
+        <h3 class="droph3">Product <i id="dispicon1" class="fa-solid fa-angle-right"></i></h3>
+        <div class="dropdown-content">
+        <a href="vegan.html">Vegan Sweets</a>
+        </div>
+      </div>
+      <h3><a   id="healthcoching">Blog</a></h3>
+      <div class="dropdown">
+        <h3 class="droph3">About Us <i id="dispicon1" class="fa-solid fa-angle-right"></i></h3>
+        <div class="dropdown-content">
+        <a>Our Story</a>
+        <a>FAQ</a>
+        <a>Testimonials</a>
+        </div>
+      </div>
+    </div>
+    <div>
+      <button id="callbtn">Call:9100347380</button>
+    </div>
+  </div>
+    <!-- header parent -->
+    <div class="weight_loss">
+      <img id="weight_loss_img" src="landing/inner-page.jpeg" alt="" />
+      <div class="weight_loss_text">
+        <h1>Payment</h1>
+      </div>
+    </div>
+
+    <!-- Payment Page  -->
+
+    <div class="payMainDiv">
+      <h3>Fill all the required details below:</h3>
+      <form method="post">
+        <div class="inputLeft">
+
+          <div class="inputBox">
+            <h4>Payment Details</h4>
+            <input
+              type="radio"
+              name="pay"
+              id="bc1"
+              checked
+              class="radio"
+              size="16"
+            />
+            <label for="bc1"><span>Credit Card</span></label>
+
+            <input type="radio" name="pay" id="bc2" class="radio" />
+            <label for="bc2"><span>Cash On Delivery</span></label>
+          </div>
+
+          <div class="inputBox">
+            <input type="number" placeholder="16 Digit Card Number" required class="name" id="cc">
+          </div>
+
+          <div class="inputBox">
+            <input
+              type="number"
+              placeholder="3 Digit CVV"
+              required
+              class="name"
+              id="cvv"
+            />
+          </div>
+
+          <div class="input-group">
+            <div class="input-box">
+              <button id="pay" type="submit">Pay now</button>
+            </div>
+          </div>
+      </div>
+      </div>
+       <div class="inputRight">
+        <input type="checkbox" />
+        <span>Ship to a different address?</span>
+        <p>Order notes (optional)</p>
+        <input
+          type="text"
+          id="notes"
+          placeholder="special notes for delivery."
+        />
+      </form>
+    </div>
+
+    <div class="container otpIn">
+      <div class="input-group">
+        <div class="input-box">
+          <input
+            type="number"
+            placeholder="Enter Otp"
+            required
+            class="name"
+            id="oneTmPs"
+          />
+          <i class="fa fa-sms icon"></i>
+        </div>
+        <button id="otpSubmit" type="submit">Submit</button>
+      </div>
+    </div>
+  </body>
+  <script>
+    document.querySelector("form").addEventListener("submit", paymentFunction);
+
+function paymentFunction(e) {
+  e.preventDefault();
+  var cc = document.getElementById("cc").value;
+  var cvv = document.getElementById("cvv").value;
+
+  if (cc.length == 16 && cvv.length == 3) {
+    alert("Enter Otp = 7575");
+    document.querySelector(".otpIn").style.display = "flex";
+  }
+
+  if (!(cc.length == 16 && cvv.length == 3)) {
+    alert("Incorrect Details");
+  }
+}
+
+document.getElementById("otpSubmit").addEventListener("click", otpFunction);
+
+function otpFunction(e) {
+  e.preventDefault();
+
+  var valid = document.getElementById("oneTmPs").value;
+  if (valid == 7575) {
+    alert("Payment Successful");
+    window.location.href = "sucess.html";
+  } else {
+    alert("Invalid Otp");
+  }
+}
+// document.getElementById("otpSubmit").addEventListener("click", function () {
+//   window.location.href = "index.html";
+// });
+
+  </script>
+</html>
